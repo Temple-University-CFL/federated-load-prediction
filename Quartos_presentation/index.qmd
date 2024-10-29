@@ -1,0 +1,289 @@
+---
+title: "IEEE GESS 2024"
+#title: "A Distributed but Secured Optimization Problem"
+subtitle: Federated Learning-based Resilient Control of Shipboard Power System
+author:
+  - name: Anway Bose
+    orcid: 0000-0002-7145-6203
+    email: anway.bose@temple.edu
+    affiliations: Temple University
+  - name: Joseph Amato
+    #orcid: 0000-0002-6036-5947
+    email: joseph.amato@navy.mil
+    affiliations: Naval Surface Warfare Center
+  - name: Li Bai
+    orcid: 0000-0002-6036-5947
+    email: lbai@temple.edu
+    affiliations: Temple University
+date: "2024-10-14"
+date-format: long
+bibliography: referencelist1.bib
+format:
+  clean-revealjs:
+    theme: test.scss
+    logo: images/temple.png
+#    css: logo.css
+    chalkboard: true
+    slide-number: true
+    footer: Computer Fusion Laboratory
+    preview-links: auto
+    pointer:
+      color: "#e7298a"
+    pointerSize: 24
+revealjs-plugins:
+  - pointer
+filters: 
+  - reveal-auto-agenda
+auto-agenda:
+  heading: "Contents:"
+editor: 
+  markdown: 
+    wrap: 72
+# Motivation
+---
+
+
+# Problem Formulation
+## Problem Formulation
+![Navy Shipboard Powersystem](./images/navy_ship.png){width=50% fig-align="center"}
+
+## Centralized Method
+![Centralized Load Dispatch](./images/central_1.png){width=100% fig-align="center"}
+
+## Centralized Method
+![Centralized Load Dispatch](./images/central_2.png){width=100% fig-align="center"}
+
+## Centralized Method
+![Centralized Load Dispatch](./images/central_3.png){width=100% fig-align="center"}
+
+
+## Centralized Method
+
+::: {.callout-note title="Optimization Problem"}
+-   Objective
+$\text{arg} \min_{g_1,..,g_P} \ \frac{1}{2}\left \lVert \sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \right \rVert^2$
+
+- constraint
+$\sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \geq 0$
+
+:::
+
+## Centralized Method
+
+::: {.callout-note title="Optimization Problem"}
+-   Objective
+$\text{arg} \min_{g_1,..,g_P} \ \frac{1}{2}\left \lVert \sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \right \rVert^2$
+
+- constraint
+$\sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \geq 0$
+
+:::
+
+::: {.callout-note title="Gradient"}
+- Lagrangian
+$\mathcal{L} = \frac{1}{2} \left\lVert \sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \right\rVert^2 - \lambda \left(\sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) + s\right)$
+
+- gradient
+$\nabla \mathcal{L} \lvert_{g_i(t)} = \left \lVert \sum_{i=1}^P g_i(t) - \sum_{j=1}^K z_j(t) \right \rVert - \lambda = 0$
+
+- estimate
+$$\Rightarrow \hat{g_i}(t) = \lambda + \color{red}{\sum_{j=1}^K z_j(t)} - \color{red}{\sum_{p=1, p \neq i}^P g_p(t)}$$
+:::
+
+
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/central_attack_1.png){width=100% fig-align="center"}
+
+
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/central_attack_2.png){width=100% fig-align="center"}
+
+
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/central_attack_3.png){width=100% fig-align="center"}
+
+
+# Federated XGBoost for Generator Load Prediction
+
+## Federated XGBoost
+
+- Short-term Zonal Load Forecast Model
+
+- Total Zonal Load Demand Model
+
+- Generator Specific Load Model
+
+## Short-term Zonal Load Forecast Model
+
+::: {.callout-note title="short-term Zonal Load Forecast Model"}
+- xgboost objective
+$\text{obj}_j^{(m)} = \sum_{t=1}^T \left(z_j(t) - \left(\hat{z}_j(t)^{(m-1)} + f_m(t)\right)\right)^2 + \sum_{i=1}^m \Omega(f_i)$
+:::
+![short-term Zonal Load Forecast Model](./images/fed_xgboost_1.png){width=100% fig-align="center"}
+
+
+## Total Zonal Load Demand Model
+::: {.callout-note title="Total Zonal Load Demand Model"}
+- xgboost objective
+$\text{obj}^{(m)} = \sum_{t=1}^T \left(\sum_{j=1}^K z_j(t) - \left(\sum_{j=1}^K\hat{z}_j(t)^{(m-1)} + f_m(t)\right)\right)^2 + \sum_{i=1}^m \Omega(f_i)$
+:::
+![Total Zonal Load Demand Model](./images/fed_xgboost_2.png){width=150% fig-align="center"}
+
+## Generator Specific Load Model
+
+::: {.callout-note title="Generator Specific Load Model"}
+- xgboost objective
+$\text{obj}_i^{(m)} = \sum_{t=1}^T \left(g_t(t) - \left(\hat{g_i}(t)^{(m-1)} + f_m(t)\right)\right)^2 + \sum_{j=1}^m \Omega(f_j)$
+:::
+![Generator Specific Load Model](./images/fed_xgboost_3.png){width=100% fig-align="center"}
+
+# Results
+
+## Error injection simulation
+
+-Generator 2S
+![Generator 2S Prediction](./images/Fed xgboost multi zonal noise generator_2S_Generator.png){width=100% fig-align="center"}
+
+## Error injection simulation
+
+-Generator 3S
+![Generator 3S Prediction](./images/Fed xgboost multi zonal noise generator_3S_Generator.png){width=100% fig-align="center"}
+
+
+## Error injection simulation
+
+-Generator 5S
+![Generator 5S Prediction](./images/Fed xgboost multi zonal noise generator_5S_Generator.png){width=100% fig-align="center"}
+
+# Convergence
+
+## Convergence Analysis
+::: {.callout-note title="Convergence Analysis"}
+- xgboost objective
+$\text{obj}^{(m)} = \sum_{j=1}^K\text{obj}_j^{(m)} + \sum_{i=1}^P\text{obj}_i^{(m)}$
+
+$z_j(t) - \hat{z_j}(t) \rightarrow 0$
+
+$g_i(t) - \hat{g_i}(t) \rightarrow 0$
+:::
+
+## Convergence Simulation
+::: columns
+
+::: {.column width="33%"}
+![2S Loss](./images/Fed_xgboost 0_zonal_noise_generator_2S_Generator_loss.png){width=200% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![2S prediction round 1](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_1.png){width=200% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![2S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_2.png){width=200% fig-align="left"}
+:::
+:::
+
+
+::: columns
+
+::: {.column width="33%"}
+![3S Loss](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_loss.png){width=200% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![3S prediction round 1](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_1.png){width=200% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![3S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_2.png){width=200% fig-align="left"}
+:::
+:::
+
+# Conclusion
+
+## Conclusion and Future Work
+::: {.callout-note title="Conclusion"}
+- introduced a robust federated strategy for
+resilient control of distributed Synchronous generators
+
+-  theoretically proved the convergence of our approach
+
+-  performed experiments with the
+injection of various errors into the historical data of the zonal
+loads and have shown how resilient the system is to random
+injection of errors
+:::
+
+## Conclusion and Future Work
+::: {.callout-note title="Conclusion"}
+- introduced a robust federated strategy for
+resilient control of distributed Synchronous generators
+
+-  theoretically proved the convergence of our approach
+
+-  performed experiments with the
+injection of various errors into the historical data of the zonal
+loads and have shown how resilient the system is to random
+injection of errors
+:::
+
+::: {.callout-note title="Future Work"}
+- plan to include fuel cost in our objective function
+to find the optimal low-cost distribution of generator loads
+and demonstrate its resiliency in the face of communication
+disruptions
+
+- The aggregation server function can also be
+duplicated at each generator to provide redundancy to the
+system
+
+-  federated learning method will also be compared
+to different regression approaches such as Gaussian Process
+Regression and combination of GPR and XGBoost on zonal
+and generator side modeling
+:::
+
+## THANK YOU
+
+::: columns
+
+::: {.column width="33%"}
+![Anway Bose (anway.bose@temple.edu)](./images/Anway_Bose.jpg){width=56% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![Joseph Amato (joseph.amato@navy.mil)](./images/Joseph_Amato.jpg){width=200% fig-align="left"}
+:::
+
+::: {.column width="0.5%"}
+:::
+
+::: {.column width="33%"}
+![Dr. Li Bai (li.bai@temple.edu)](./images/li_bai.png){width=150% fig-align="right"}
+:::
+
+:::
+
+
+
+
+
+
+
+::: {#referencelist1}
+:::

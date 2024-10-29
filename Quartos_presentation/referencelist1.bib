@@ -1,0 +1,591 @@
+% This file was created with JabRef 2.8.1.
+% Encoding: GBK
+
+
+@InProceedings{mcmahan17,
+  title = 	 {{Communication-Efficient Learning of Deep Networks from Decentralized Data}},
+  author = 	 {McMahan, Brendan and Moore, Eider and Ramage, Daniel and Hampson, Seth and Arcas, Blaise Aguera y},
+  booktitle = 	 {Proceedings of the 20th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {1273--1282},
+  year = 	 {2017},
+  editor = 	 {Singh, Aarti and Zhu, Jerry},
+  volume = 	 {54},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {20--22 Apr},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v54/mcmahan17a/mcmahan17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v54/mcmahan17a.html},
+  abstract = 	 {Modern mobile devices have access to a wealth of data suitable for learning models, which in turn can greatly improve the user experience on the device. For example, language models can improve speech recognition and text entry, and image models can automatically select good photos. However, this rich data is often privacy sensitive, large in quantity, or both, which may preclude logging to the data center and training there using conventional approaches.  We advocate an alternative that leaves the training data distributed on the mobile devices, and learns a shared model by aggregating locally-computed updates. We term this decentralized approach Federated Learning.  We present a practical method for the federated learning of deep networks based on iterative model averaging, and conduct an extensive empirical evaluation, considering five different model architectures and four datasets. These experiments demonstrate the approach is robust to the unbalanced and non-IID data distributions that are a defining characteristic of this setting. Communication costs are the principal constraint, and we show a reduction in required communication rounds by 10-100x as compared to synchronized stochastic gradient descent. }
+}
+
+
+@InProceedings{scaffold,
+  title = 	 {{SCAFFOLD}: Stochastic Controlled Averaging for Federated Learning},
+  author =       {Karimireddy, Sai Praneeth and Kale, Satyen and Mohri, Mehryar and Reddi, Sashank and Stich, Sebastian and Suresh, Ananda Theertha},
+  booktitle = 	 {Proceedings of the 37th International Conference on Machine Learning},
+  pages = 	 {5132--5143},
+  year = 	 {2020},
+  editor = 	 {III, Hal Daumé and Singh, Aarti},
+  volume = 	 {119},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--18 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v119/karimireddy20a/karimireddy20a.pdf},
+  url = 	 {https://proceedings.mlr.press/v119/karimireddy20a.html},
+  abstract = 	 {Federated learning is a key scenario in modern large-scale machine learning where the data remains distributed over a large number of clients and the task is to learn a centralized model without transmitting the client data. The standard optimization algorithm used in this setting is Federated Averaging (FedAvg) due to its low communication cost. We obtain a tight characterization of the convergence of FedAvg and prove that heterogeneity (non-iid-ness) in the client’s data results in a ‘drift’ in the local updates resulting in poor performance. As a solution, we propose a new algorithm (SCAFFOLD) which uses control variates (variance reduction) to correct for the ‘client drift’. We prove that SCAFFOLD requires significantly fewer communication rounds and is not affected by data heterogeneity or client sampling. Further, we show that (for quadratics) SCAFFOLD can take advantage of similarity in the client’s data yielding even faster convergence. The latter is the first result to quantify the usefulness of local-steps in distributed optimization.}
+}
+
+@article{niid_fedl,
+  doi = {10.48550/ARXIV.1806.00582},
+  
+  url = {https://arxiv.org/abs/1806.00582},
+  
+  author = {Zhao, Yue and Li, Meng and Lai, Liangzhen and Suda, Naveen and Civin, Damon and Chandra, Vikas},
+  
+  keywords = {Machine Learning (cs.LG), Machine Learning (stat.ML), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Federated Learning with Non-IID Data},
+  
+  publisher = {arXiv},
+  
+  year = {2018},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+
+@InProceedings{maml,
+  title = 	 {Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks},
+  author =       {Chelsea Finn and Pieter Abbeel and Sergey Levine},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {1126--1135},
+  year = 	 {2017},
+  editor = 	 {Precup, Doina and Teh, Yee Whye},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Aug},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/finn17a/finn17a.pdf},
+  url = 	 {https://proceedings.mlr.press/v70/finn17a.html},
+  abstract = 	 {We propose an algorithm for meta-learning that is model-agnostic, in the sense that it is compatible with any model trained with gradient descent and applicable to a variety of different learning problems, including classification, regression, and reinforcement learning. The goal of meta-learning is to train a model on a variety of learning tasks, such that it can solve new learning tasks using only a small number of training samples. In our approach, the parameters of the model are explicitly trained such that a small number of gradient steps with a small amount of training data from a new task will produce good generalization performance on that task. In effect, our method trains the model to be easy to fine-tune. We demonstrate that this approach leads to state-of-the-art performance on two few-shot image classification benchmarks, produces good results on few-shot regression, and accelerates fine-tuning for policy gradient reinforcement learning with neural network policies.}
+}
+
+@inproceedings{perfedavg,
+ author = {Fallah, Alireza and Mokhtari, Aryan and Ozdaglar, Asuman},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin},
+ pages = {3557--3568},
+ publisher = {Curran Associates, Inc.},
+ title = {Personalized Federated Learning with Theoretical Guarantees: A Model-Agnostic Meta-Learning Approach},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2020/file/24389bfe4fe2eba8bf9aa9203a44cdad-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
+
+@inproceedings{fedprox,
+ author = {Li, Tian and Sahu, Anit Kumar and Zaheer, Manzil and Sanjabi, Maziar and Talwalkar, Ameet and Smith, Virginia},
+ booktitle = {Proceedings of Machine Learning and Systems},
+ editor = {I. Dhillon and D. Papailiopoulos and V. Sze},
+ pages = {429--450},
+ title = {Federated Optimization in Heterogeneous Networks},
+ url = {https://proceedings.mlsys.org/paper_files/paper/2020/file/1f5fe83998a09396ebe6477d9475ba0c-Paper.pdf},
+ volume = {2},
+ year = {2020}
+}
+
+
+@inproceedings{fednova,
+author = {Wang, Jianyu and Liu, Qinghua and Liang, Hao and Joshi, Gauri and Poor, H. Vincent},
+title = {Tackling the objective inconsistency problem in heterogeneous federated optimization},
+year = {2020},
+isbn = {9781713829546},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {In federated learning, heterogeneity in the clients' local datasets and computation speeds results in large variations in the number of local updates performed by each client in each communication round. Naive weighted aggregation of such models causes objective inconsistency, that is, the global model converges to a stationary point of a mismatched objective function which can be arbitrarily different from the true objective. This paper provides a general framework to analyze the convergence of heterogeneous federated optimization algorithms. It subsumes previously proposed methods such as FedAvg and FedProx, and provides the first principled understanding of the solution bias and the convergence slowdown due to objective inconsistency. Using insights from this analysis, we propose FedNova, a normalized averaging method that eliminates objective inconsistency while preserving fast error convergence.},
+booktitle = {Proceedings of the 34th International Conference on Neural Information Processing Systems},
+articleno = {638},
+numpages = {13},
+location = {<conf-loc>, <city>Vancouver</city>, <state>BC</state>, <country>Canada</country>, </conf-loc>},
+series = {NIPS '20}
+}
+
+
+@inproceedings{pfedme,
+author = {Dinh, Canh T. and Tran, Nguyen H. and Nguyen, Tuan Dung},
+title = {Personalized federated learning with moreau envelopes},
+year = {2020},
+isbn = {9781713829546},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Federated learning (FL) is a decentralized and privacy-preserving machine learning technique in which a group of clients collaborate with a server to learn a global model without sharing clients' data. One challenge associated with FL is statistical diversity among clients, which restricts the global model from delivering good performance on each client's task. To address this, we propose an algorithm for personalized FL (pFedMe) using Moreau envelopes as clients' regularized loss functions, which help decouple personalized model optimization from the global model learning in a bi-level problem stylized for personalized FL. Theoretically, we show that pFedMe's convergence rate is state-of-the-art: achieving quadratic speedup for strongly convex and sublinear speedup of order 2/3 for smooth non-convex objectives. Experimentally, we verify that pFedMe excels at empirical performance compared with the vanilla FedAvg and Per-FedAvg, a meta-learning based personalized FL algorithm.},
+booktitle = {Proceedings of the 34th International Conference on Neural Information Processing Systems},
+articleno = {1796},
+numpages = {12},
+location = {<conf-loc>, <city>Vancouver</city>, <state>BC</state>, <country>Canada</country>, </conf-loc>},
+series = {NIPS '20}
+}
+
+@article{CatalystAF,
+  title={Catalyst Acceleration for First-order Convex Optimization: from Theory to Practice},
+  author={Hongzhou Lin and Julien Mairal and Za{\"i}d Harchaoui},
+  journal={J. Mach. Learn. Res.},
+  year={2017},
+  volume={18},
+  pages={212:1-212:54},
+  url={https://api.semanticscholar.org/CorpusID:49676227}
+}
+
+@inproceedings{NEURIPS2019_8c235f89,
+ author = {Zhou, Pan and Yuan, Xiaotong and Xu, Huan and Yan, Shuicheng and Feng, Jiashi},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Efficient Meta Learning via Minibatch Proximal Update},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2019/file/8c235f89a8143a28a1d6067e959dd858-Paper.pdf},
+ volume = {32},
+ year = {2019}
+}
+
+@inproceedings{fedbe,
+  title={FedBE: Making Bayesian Model Ensemble Applicable to Federated Learning},
+  author={Chen, Hong-You and Chao, Wei-Lun},
+  booktitle = {ICLR},
+  year={2021}
+}
+
+
+@Article{pbfl,
+AUTHOR = {Thorgeirsson, Adam Thor and Gauterin, Frank},
+TITLE = {Probabilistic Predictions with Federated Learning},
+JOURNAL = {Entropy},
+VOLUME = {23},
+YEAR = {2021},
+NUMBER = {1},
+ARTICLE-NUMBER = {41},
+URL = {https://www.mdpi.com/1099-4300/23/1/41},
+PubMedID = {33396677},
+ISSN = {1099-4300},
+ABSTRACT = {Probabilistic predictions with machine learning are important in many applications. These are commonly done with Bayesian learning algorithms. However, Bayesian learning methods are computationally expensive in comparison with non-Bayesian methods. Furthermore, the data used to train these algorithms are often distributed over a large group of end devices. Federated learning can be applied in this setting in a communication-efficient and privacy-preserving manner but does not include predictive uncertainty. To represent predictive uncertainty in federated learning, our suggestion is to introduce uncertainty in the aggregation step of the algorithm by treating the set of local weights as a posterior distribution for the weights of the global model. We compare our approach to state-of-the-art Bayesian and non-Bayesian probabilistic learning algorithms. By applying proper scoring rules to evaluate the predictive distributions, we show that our approach can achieve similar performance as the benchmark would achieve in a non-distributed setting.},
+DOI = {10.3390/e23010041}
+}
+
+
+@misc{pfedbayes,
+      title={Personalized Federated Learning via Variational Bayesian Inference}, 
+      author={Xu Zhang and Yinchuan Li and Wenpeng Li and Kaiyang Guo and Yunfeng Shao},
+      year={2022},
+      eprint={2206.07977},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@ARTICLE{BO_DNN,
+  author={Shahriari, Bobak and Swersky, Kevin and Wang, Ziyu and Adams, Ryan P. and de Freitas, Nando},
+  journal={Proceedings of the IEEE}, 
+  title={Taking the Human Out of the Loop: A Review of Bayesian Optimization}, 
+  year={2016},
+  volume={104},
+  number={1},
+  pages={148-175},
+  keywords={Big data;Bayes methods;Linear programming;Decision making;Design of experiments;Optimization;Genomes;Statistical analysis;decision making;design of experiments;optimization;response surface methodology;statistical learning;genomic medicine;Decision making;design of experiments;optimization;response surface methodology;statistical learning},
+  doi={10.1109/JPROC.2015.2494218}}
+
+
+@inproceedings{FTS,
+author = {Dai, Zhongxiang and Low, Bryan Kian Hsiang and Jaillet, Patrick},
+title = {Federated Bayesian optimization via thompson sampling},
+year = {2020},
+isbn = {9781713829546},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+abstract = {Bayesian optimization (BO) is a prominent approach to optimizing expensive-to-evaluate black-box functions. The massive computational capability of edge devices such as mobile phones, coupled with privacy concerns, has led to a surging interest in federated learning (FL) which focuses on collaborative training of deep neural networks (DNNs) via first-order optimization techniques. However, some common machine learning tasks such as hyperparameter tuning of DNNs lack access to gradients and thus require zeroth-order/black-box optimization. This hints at the possibility of extending BO to the FL setting (FBO) for agents to collaborate in these black-box optimization tasks. This paper presents federated Thompson sampling (FTS) which overcomes a number of key challenges of FBO and FL in a principled way: We (a) use random Fourier features to approximate the Gaussian process surrogate model used in BO, which naturally produces the parameters to be exchanged between agents, (b) design FTS based on Thompson sampling, which significantly reduces the number of parameters to be exchanged, and (c) provide a theoretical convergence guarantee that is robust against heterogeneous agents, which is a major challenge in FL and FBO. We empirically demonstrate the effectiveness of FTS in terms of communication efficiency, computational efficiency, and practical performance.},
+booktitle = {Proceedings of the 34th International Conference on Neural Information Processing Systems},
+articleno = {812},
+numpages = {13},
+location = {<conf-loc>, <city>Vancouver</city>, <state>BC</state>, <country>Canada</country>, </conf-loc>},
+series = {NIPS '20}
+}
+
+@inproceedings{DP-FTS-DE,
+  title={Differentially Private Federated Bayesian Optimization with Distributed Exploration},
+  author={Zhongxiang Dai and Kian Hsiang Low and Patrick Jaillet},
+  booktitle={Neural Information Processing Systems},
+  year={2021},
+  url={https://api.semanticscholar.org/CorpusID:239998449}
+}
+
+
+@INPROCEEDINGS{9835537,
+  author={Li, Qinbin and Diao, Yiqun and Chen, Quan and He, Bingsheng},
+  booktitle={2022 IEEE 38th International Conference on Data Engineering (ICDE)}, 
+  title={Federated Learning on Non-IID Data Silos: An Experimental Study}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={965-978},
+  keywords={Data privacy;Machine learning algorithms;Distributed databases;Training data;Machine learning;Organizations;Collaborative work;Federated Learning;Benchmark},
+  doi={10.1109/ICDE53745.2022.00077}}
+
+
+
+
+
+
+
+
+
+
+
+
+@ARTICLE{Panescu,
+  author = {D. Panescu},
+  title = {Emerging technologies: wireless communication systems for implantable
+	medical devices},
+  journal = {Engineering in Medicine and Biology Magazine},
+  year = {2008},
+  volume = {27},
+  pages = {96-101},
+  part = {March-April},
+  owner = {xiah},
+  timestamp = {2012.07.22}
+}
+
+@CONFERENCE{Jam6,
+  author = {Popper, C. and M. Strasser, M. and Capkun, S.},
+  title = {Jamming-resistant broadcast communication without shared keys},
+  booktitle = {Proc. of USENIX Security Symp.'09},
+  year = {2009},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@ARTICLE{Radcliffe,
+  author = {J. Radcliffe},
+  title = {Hacking Medical Devices for Fun and Insulin: Breaking the Human SCADA
+	System},
+  journal = {https://media.blackhat.com/bh-us-11/Radcliffe/BH\_US\_11\_Radcliff\_Hacking\_Medical\_Devices\_WP.pdf},
+  year = {2011},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@INPROCEEDINGS{CCS,
+  author = {Rasmussen, K. B. and Castelluccia, C. and Heydt-Benjamin, T. and
+	Capkun, S.},
+  title = {Proximity-based access control for implantable medical devices},
+  booktitle = {Proc. of ACM CCS},
+  year = {2009},
+  pages = {410-419},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@INPROCEEDINGS{DoS1,
+  author = {D. Raymond},
+  title = {Effects of denial of sleep attacks on wireless sensor network MAC
+	protocols},
+  booktitle = {Proc. of the 7th Ann. IEEE Systems, Man, and Cybernetics, Information
+	Assurance Workshop},
+  year = {2006},
+  pages = {297-304},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{DoS,
+  author = {D. Raymond and S. Midkiff},
+  title = {Denial-of-service in wireless sensor networks: attacks and defenses},
+  journal = {IEEE Pervasive Computering},
+  year = {2008},
+  volume = {7},
+  pages = {74-81},
+  month = {Jan.-Mar.},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@INPROCEEDINGS{RFID,
+  author = {Rieback, M. R. and Crispo, B. and Tanenbaum, A. S.},
+  title = {RFID guardian: a battery-powered mobile device for RFID privacy management},
+  booktitle = {Proc. of 10th Australasian Conf. on Information Security and Privacy},
+  year = {2005},
+  pages = {184-194},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{20,
+  author = {A. Ross},
+  title = {Iris recognition: the path forward},
+  journal = {M. Computer},
+  year = {2010},
+  volume = {43},
+  pages = {30-35},
+  number = {2},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@INPROCEEDINGS{HtH,
+  author = {Rostami, M. and Juels, A. and Koushanfar, F.},
+  title = {Heart-to-Heart (H2H): Authentication for Implanted Medical Devices},
+  booktitle = {Proc. of the ACM CCS'13},
+  year = {2013},
+  owner = {xiah},
+  timestamp = {2013.11}
+}
+
+@TECHREPORT{TFS,
+  author = {N. Serinken and K. J. Ellis and E. L. Lavigne},
+  title = {An Evaluation of the MoTron TxID-1 Transmitter Fingerprinting System},
+  institution = {Communications Research Centre},
+  year = {1997},
+  owner = {xiah},
+  timestamp = {2012.07.29}
+}
+
+@INPROCEEDINGS{Fang,
+  author = {J. Sun and X. Zhu and C. Zhang and Y. Fang},
+  title = {HCPP: Cryptography Based Secure EHR System for Patient Privacy and
+	Emergency Healthcare},
+  booktitle = {Proc. of ICDCS'11},
+  year = {2011},
+  pages = {373-382},
+  owner = {xiah},
+  timestamp = {2012.07.29}
+}
+
+@INPROCEEDINGS{604-613,
+  author = {V. V. Triem Tong and H. Sibert and J. Lecoeur and M. Girault},
+  title = {Biometric Fuzzy extractors made practical: A proposal based on FingerCodes},
+  booktitle = {Advances in Biometrics, Lecture Notes in Computer Science, 4642},
+  year = {2007},
+  owner = {xiali},
+  timestamp = {2012.07.30}
+}
+
+@INPROCEEDINGS{Biosys,
+  author = {Uludag, U. and Pankanti, S. and Prabhakar, S. and Jain, A. K.},
+  title = {Biometric Cryptosystems: Issues and Challenges},
+  booktitle = {Proc. of the IEEE},
+  year = {2004},
+  volume = {92},
+  number = {6},
+  pages = {948-960},
+  owner = {xiah},
+  timestamp = {2012.07.29}
+}
+
+@ARTICLE{UPPennpart1,
+  author = {Vasserman, E. Y. and Venkatasubramanian, K. K. and Sokolsky, O and
+	Lee, L.},
+  title = {Security and Interoperable Medical Device Systems, Part 1},
+  journal = {IEEE Security and Privacy Magazine},
+  year = {2012},
+  volume = {10},
+  pages = {70-73},
+  number = {6},
+  owner = {xiah},
+  timestamp = {2012}
+}
+
+@INPROCEEDINGS{Infocom08,
+  author = {Venkatasubramanian, K. K. and Banerjee, A. and Gupta, S. K. S.},
+  title = {EKG-based key agreement in body sensor networks},
+  booktitle = {Proc. of the IEEE INFOCOM},
+  year = {2013},
+  pages = {1-6},
+  owner = {xiah},
+  timestamp = {2013.4}
+}
+
+@ARTICLE{UPPennpart2,
+  author = {Venkatasubramanian, K. K. and Vasserman, E. Y. and Sokolsky, O and
+	Lee, L. },
+  title = {Security and Interoperable Medical Device Systems, Part 2},
+  journal = {IEEE Security and Privacy Magazine},
+  year = {2012},
+  volume = {10},
+  pages = {61-63},
+  number = {5},
+  owner = {xiah},
+  timestamp = {2012}
+}
+
+@ARTICLE{Inter,
+  author = {M. K. Wallin and T. Marve and P. K. Hakansson},
+  title = {Modern Wireless Telecommunication Technologies and Their Electromagnetic
+	Compatibility with Life-Supporting Equipment},
+  journal = {Anesth Analg 2005},
+  year = {2005},
+  volume = {101},
+  pages = {1393-1400},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@INPROCEEDINGS{telemedicine,
+  author = {Rita H. Wouhaybi and Mark D. Yarvis and Philip Muse and Chieh-Yih
+	Wan and Sangita Sharma and Sai Prasad and Lenitra Durham and Ritu
+	Sahni and Robert Norton and Merlin Curry and Holly Jimison and Richard
+	Harper and Robert Lowe},
+  title = {A Context-Management Framework for Telemedicine: An Emergency Medicine
+	Case Study},
+  booktitle = {Proc. of Wireless Health'10},
+  year = {2010},
+  pages = {164-173},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@CONFERENCE{CCT,
+  author = {Fengyuan Xu and Zhengrui Qin and Chiu C. Tan and Baosheng Wang and
+	Qun Li},
+  title = {IMDGuard: Securing implantable medical devices with the external
+	wearable guardian},
+  booktitle = {Prof. of IEEE INFOCOM' 11},
+  year = {2011},
+  address = {Shanghai, China},
+  month = {April},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@BOOK{1,
+  title = {Design of cardiac pacemakers},
+  publisher = {IEEE Press},
+  year = {1995},
+  editor = {J. G. Webster},
+  owner = {xiah},
+  timestamp = {2012.07.22}
+}
+
+@ARTICLE{[4],
+  title = {http://www.tudiabetes.org/forum/topics/more-interesting-facts-on.},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{2kopkthe,
+  title = {US healthcare equipment and supplies - diabetes},
+  address = {http://www.research.hsbc.com.},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{3,
+  title = {www.medtronic.com/your-health/bradycardia/device/},
+  owner = {xiah},
+  timestamp = {2012.07.22}
+}
+
+@ARTICLE{4,
+  title = {http://www.bodymedia.com/},
+  owner = {xiah},
+  timestamp = {2012.07.22}
+}
+
+@ARTICLE{Bio,
+  title = {http://biometrics.cse.msu.edu/info.html},
+  owner = {xiah},
+  timestamp = {2012.09.10}
+}
+
+@ARTICLE{CASIA,
+  title = {CASIA-IrisV3},
+  journal = {http: //www.cbsr.ia.ac.cn/IrisDatabase},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{GA,
+  title = {http://en.wikipedia.org/wiki/Genetic\_algorithm.},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@ARTICLE{Globaldata,
+  author={GlobalData, Inc.},
+  title = {Insulin pumps - global pipeline analysis, opportunity assessment
+	and market forecasts to 2016, GlobalData},
+  journal = {http://www.globaldata.com},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{hanselman,
+  title = {http://www.hanselman.com/blog/HackersCanKillDiabeticsWithInsulinPumpsFromAHalfMileAwayUmNoFactsVsJournalisticFearMongering.aspx},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{k-fold,
+  title = {http://en.wikipedia.org/wiki/Cross-validation\_(statistics).},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@ARTICLE{mote,
+  title = {Mica2 mote sensor},
+  organization = {Crossbow Technology},
+  owner = {xiah},
+  timestamp = {2012.07.23},
+  yer = {http://www.xbow.com}
+}
+
+@ARTICLE{NDIC,
+  title = {National Diabetes Information Clearinghouse},
+  address = {http://www.diabetes.niddk.nih.gov/dm/pubs/hypoglycemia/index.aspx.},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{patent,
+  title = {http://www.patentgenius.com/patent/5674259.html},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{Diafact,
+  title = {2007 national diabetes fact sheet},
+  journal = {http://www.cdc.gov/diabetes/pubs/pdf/ndfs 2011.pdf.},
+  year = {2011},
+  owner = {xiali},
+  timestamp = {2013.11.04}
+}
+
+@ARTICLE{Jack,
+  title = {http://www.theregister.co.uk/2011/10/27/fatal\_insulin\_pump\_attack.},
+  year = {2011},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@ARTICLE{pacemaker,
+  author={Report},
+  title = {http://www.computerworld.com/s/article/9232477/Pacemaker\_hack\_can\_\\deliver\_deadly\_830\_volt\_jolt},
+  year = {2010},
+  address = {http://www.fda.gov/infusionpumps.},
+  owner = {xiah},
+  timestamp = {2012.07.23}
+}
+
+@TECHREPORT{2,
+  title = {Avant 4000 Bluetooth Wireless Oximetry: increased safety and accuracy
+	when administering the six-minute walk test},
+  institution = {Nonin Medical, Inc.},
+  year = {2008},
+  owner = {xiah},
+  timestamp = {2012.07.22}
+}
+
+@PATENT{telemetric,
+  author={Patent},
+  nationality = {USA},
+  year = {2008},
+  title = {Secure telemetric linkSecure telemetric link},
+  owner = {xiali},
+  timestamp = {2013.11.05}
+}
+
