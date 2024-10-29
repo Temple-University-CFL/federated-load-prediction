@@ -1,0 +1,35 @@
+version: '3'
+services:
+  ship_load:
+#    image: intel4coro/mqtt-ros2:humble-py3.10
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    tty: true
+    ports: 
+      - 8888:8888
+      - 1883:1883
+      - 11311:11311
+    privileged: true
+    # user: root
+    user: jovyan
+    working_dir: /home/jovyan
+    command: jupyter lab --allow-root --NotebookApp.token='' --no-browser --ip=0.0.0.0
+    entrypoint: ["/entrypoint.sh"]
+    volumes:
+#      - ./del_ws/:/home/jovyan/del_ws
+      - ./../dataset:/home/jovyan/dataset
+      - ./../load_data:/home/jovyan/load_data
+      - ./../python:/home/jovyan/python
+    #   - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    # environment:
+    #   - DISPLAY
+    #   - NVIDIA_DRIVER_CAPABILITIES=all
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
