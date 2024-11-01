@@ -103,6 +103,19 @@ $$\Rightarrow \hat{g_i}(t) = \lambda + \color{red}{\sum_{j=1}^K z_j(t)} - \color
 ![Centralized Load Dispatch Vulnerabilities](./images/central_attack_3.png){width=100% fig-align="center"}
 
 
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/attack_gen_1.png){width=100% fig-align="center"}
+
+
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/attack_gen_2.png){width=100% fig-align="center"}
+
+
+## Centralized Method Vulnerabilities
+![Centralized Load Dispatch Vulnerabilities](./images/attack_gen_3.png){width=100% fig-align="center"}
+
+
+
 # Federated XGBoost for Generator Load Prediction
 
 ## Federated XGBoost
