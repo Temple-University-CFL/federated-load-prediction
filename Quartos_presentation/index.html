@@ -613,15 +613,21 @@ Li Bai <a href="https://orcid.org/0000-0002-6036-5947" class="quarto-title-autho
 </section>
 <section id="error-injection-simulation" class="slide level2">
 <h2>Error injection simulation</h2>
-<p>-Generator 2S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_2S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 2S Prediction"></p>
+<ul>
+<li>Generator 2S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_2S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 2S Prediction"></li>
+</ul>
 </section>
 <section id="error-injection-simulation-1" class="slide level2">
 <h2>Error injection simulation</h2>
-<p>-Generator 3S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_3S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 3S Prediction"></p>
+<ul>
+<li>Generator 3S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_3S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 3S Prediction"></li>
+</ul>
 </section>
 <section id="error-injection-simulation-2" class="slide level2">
 <h2>Error injection simulation</h2>
-<p>-Generator 5S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_5S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 5S Prediction"></p>
+<ul>
+<li>Generator 5S <img data-src="./images/Fed%20xgboost%20multi%20zonal%20noise%20generator_5S_Generator.png" style="width:100.0%" data-fig-align="center" alt="Generator 5S Prediction"></li>
+</ul>
 </section></section>
 <section>
 <section id="convergence" class="title-slide slide level1 agenda-slide center">
@@ -664,68 +670,82 @@ Li Bai <a href="https://orcid.org/0000-0002-6036-5947" class="quarto-title-autho
 <li>xgboost objective <span class="math inline">\(\text{obj}^{(m)} = \sum_{j=1}^K\text{obj}_j^{(m)} + \sum_{i=1}^P\text{obj}_i^{(m)}\)</span></li>
 </ul>
 <p><span class="math inline">\(z_j(t) - \hat{z_j}(t) \rightarrow 0\)</span></p>
+<p><span class="math inline">\(\sum_j z_j(t) - \sum_j \hat{z_j}(t) \rightarrow 0\)</span></p>
 <p><span class="math inline">\(g_i(t) - \hat{g_i}(t) \rightarrow 0\)</span></p>
 </div>
 </div>
 </div>
 </section>
-<section id="convergence-simulation" class="slide level2">
-<h2>Convergence Simulation</h2>
+<section id="convergence-simulation-generator-2s" class="slide level2">
+<h2>Convergence Simulation (<em>Generator 2S</em>)</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost%200_zonal_noise_generator_2S_Generator_loss.png" style="width:200.0%"></p>
-<figcaption>2S Loss</figcaption>
+<p><img data-src="./images/Fed_xgboost%200_zonal_noise_generator_2S_Generator_loss.png" style="width:100.0%"></p>
 </figure>
 </div>
-</div><div class="column" style="width:0.5%;">
-
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_1.png" style="width:200.0%"></p>
-<figcaption>2S prediction round 1</figcaption>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_1.png" style="width:100.0%"></p>
 </figure>
 </div>
-</div><div class="column" style="width:0.5%;">
-
-</div><div class="column" style="width:33%;">
+</div>
+</div>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_2.png" style="width:200.0%"></p>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_2.png" style="width:50.0%"></p>
 <figcaption>2S prediction round 2</figcaption>
 </figure>
 </div>
-</div>
-</div>
+</section>
+<section id="convergence-simulation-generator-3s" class="slide level2">
+<h2>Convergence Simulation (<em>Generator 3S</em>)</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_loss.png" style="width:200.0%"></p>
-<figcaption>3S Loss</figcaption>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_loss.png" style="width:100.0%"></p>
 </figure>
 </div>
-</div><div class="column" style="width:0.5%;">
-
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_1.png" style="width:200.0%"></p>
-<figcaption>3S prediction round 1</figcaption>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_1.png" style="width:100.0%"></p>
 </figure>
 </div>
-</div><div class="column" style="width:0.5%;">
-
-</div><div class="column" style="width:33%;">
+</div>
+</div>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_2.png" style="width:200.0%"></p>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_2.png" style="width:50.0%"></p>
 <figcaption>3S prediction round 2</figcaption>
 </figure>
 </div>
+</section>
+<section id="convergence-simulation-generator-5s" class="slide level2">
+<h2>Convergence Simulation (<em>Generator 5S</em>)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_loss.png" style="width:100.0%"></p>
+</figure>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_round_1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_round_2.png" style="width:50.0%"></p>
+<figcaption>3S prediction round 2</figcaption>
+</figure>
 </div>
 </section></section>
 <section>

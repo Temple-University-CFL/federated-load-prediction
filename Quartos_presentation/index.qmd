@@ -154,18 +154,18 @@ $\text{obj}_i^{(m)} = \sum_{t=1}^T \left(g_t(t) - \left(\hat{g_i}(t)^{(m-1)} + f
 
 ## Error injection simulation
 
--Generator 2S
+- Generator 2S
 ![Generator 2S Prediction](./images/Fed xgboost multi zonal noise generator_2S_Generator.png){width=100% fig-align="center"}
 
 ## Error injection simulation
 
--Generator 3S
+- Generator 3S
 ![Generator 3S Prediction](./images/Fed xgboost multi zonal noise generator_3S_Generator.png){width=100% fig-align="center"}
 
 
 ## Error injection simulation
 
--Generator 5S
+- Generator 5S
 ![Generator 5S Prediction](./images/Fed xgboost multi zonal noise generator_5S_Generator.png){width=100% fig-align="center"}
 
 # Convergence
@@ -177,52 +177,49 @@ $\text{obj}^{(m)} = \sum_{j=1}^K\text{obj}_j^{(m)} + \sum_{i=1}^P\text{obj}_i^{(
 
 $z_j(t) - \hat{z_j}(t) \rightarrow 0$
 
+$\sum_j z_j(t) - \sum_j \hat{z_j}(t) \rightarrow 0$
+
 $g_i(t) - \hat{g_i}(t) \rightarrow 0$
 :::
 
-## Convergence Simulation
-::: columns
-
-::: {.column width="33%"}
-![2S Loss](./images/Fed_xgboost 0_zonal_noise_generator_2S_Generator_loss.png){width=200% fig-align="left"}
-:::
-
-::: {.column width="0.5%"}
-:::
-
-::: {.column width="33%"}
-![2S prediction round 1](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_1.png){width=200% fig-align="left"}
-:::
-
-::: {.column width="0.5%"}
-:::
-
-::: {.column width="33%"}
-![2S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_2.png){width=200% fig-align="left"}
-:::
-:::
-
+## Convergence Simulation (*Generator 2S*)
 
 ::: columns
+::: {.column width="50%"}
+![](./images/Fed_xgboost 0_zonal_noise_generator_2S_Generator_loss.png){width=100% fig-align="left"}
+:::
+::: {.column width="50%"}
+![](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_1.png){width=100% fig-align="left"}
+:::
+:::
+![2S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_2S_Generator_round_2.png){width=50% fig-align="left"}
 
-::: {.column width="33%"}
-![3S Loss](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_loss.png){width=200% fig-align="left"}
-:::
 
-::: {.column width="0.5%"}
-:::
+## Convergence Simulation (*Generator 3S*)
 
-::: {.column width="33%"}
-![3S prediction round 1](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_1.png){width=200% fig-align="left"}
+::: columns
+::: {.column width="50%"}
+![](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_loss.png){width=100% fig-align="left"}
 :::
+::: {.column width="50%"}
+![](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_1.png){width=100% fig-align="left"}
+:::
+:::
+![3S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_2.png){width=50% fig-align="left"}
 
-::: {.column width="0.5%"}
-:::
 
-::: {.column width="33%"}
-![3S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_3S_Generator_round_2.png){width=200% fig-align="left"}
+## Convergence Simulation (*Generator 5S*)
+
+::: columns
+::: {.column width="50%"}
+![](./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_loss.png){width=100% fig-align="left"}
+:::
+::: {.column width="50%"}
+![](./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_round_1.png){width=100% fig-align="left"}
 :::
 :::
+![3S prediction round 2](./images/Fed_xgboost_0_zonal_noise_generator_5S_Generator_round_2.png){width=50% fig-align="left"}
+
 
 # Conclusion
 
