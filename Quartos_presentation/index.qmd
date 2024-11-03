@@ -120,11 +120,15 @@ $$\Rightarrow \hat{g_i}(t) = \lambda + \color{red}{\sum_{j=1}^K z_j(t)} - \color
 
 ## Federated XGBoost
 
+::: {.callout-note title="3 step federated learning approach"}
 - Short-term Zonal Load Forecast Model
 
 - Total Zonal Load Demand Model
 
 - Generator Specific Load Model
+:::
+
+![Federated Learning](./images/fedavg.png){width=100% fig-align="center"}
 
 ## Short-term Zonal Load Forecast Model
 
